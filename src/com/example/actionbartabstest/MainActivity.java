@@ -1,6 +1,12 @@
 package com.example.actionbartabstest;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
+
+import com.example.actionbartabstest.R;
+import com.example.utils.ListViewAdpater;
+import com.example.utils.NewItem;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
@@ -177,13 +183,20 @@ public class MainActivity extends ActionBarActivity implements
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
+			List<NewItem> rowitem= new ArrayList<NewItem>();			
 			View rootView = inflater.inflate(R.layout.fragment0, container, false);
+			
 			ListView listView=(ListView) rootView.findViewById(R.id.listView1);
-			String[] testArryStrings = new String[]{"1", "2", "3", "4", "5"};
-			ArrayAdapter<String> aa= new ArrayAdapter<String>(getActivity(),
-					android.R.layout.simple_expandable_list_item_1,
-					testArryStrings);
-			listView.setAdapter(aa);
+//			String[] testArryStrings = new String[]{"1", "2", "3", "4", "5"};
+//			ArrayAdapter<String> aa= new ArrayAdapter<String>(getActivity(),
+//					android.R.layout.simple_expandable_list_item_1,
+//					testArryStrings);
+//			listView.setAdapter(aa);
+			
+			rowitem.add(new NewItem("item 1","2014/06/26"));
+			ListViewAdpater adpater= new ListViewAdpater(getActivity(),rowitem);
+			listView.setAdapter(adpater);
+			
 			return rootView;
 		}
 	}
