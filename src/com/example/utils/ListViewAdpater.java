@@ -1,7 +1,12 @@
 package com.example.utils;
 
-import com.example.actionbartabstest.R;
+
 import java.util.List;
+
+import com.example.tabsDemo.R;
+
+
+
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;

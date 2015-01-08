@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ActionBarTabsTest</string>
+    <string name="app_name">ActionBarTabsDemo</string>
     <string name="title_section1">ListView</string>
     <string name="title_section2">Add</string>
     <string name="action_settings">Settings</string>
